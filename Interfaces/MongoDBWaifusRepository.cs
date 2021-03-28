@@ -10,6 +10,7 @@ using MongoDB.Bson;
 
 namespace ConsoleApp1.Interfaces {
     class MongoDBWaifusRepository : IWaifusRepository {
+        //docker run -it -p 27050:27017 --rm -e MONGO_INITDB_ROOT_USERNAME = root - e MONGO_INITDB_ROOT_PASSWORD=secret mongo
         private const string databaseName = "waifu";
         private const string collectionName = "waifus";
         private MongoClient mongoClient;

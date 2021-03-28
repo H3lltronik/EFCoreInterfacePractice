@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace ConsoleApp1.Interfaces {
     class MySQLWaifusRepository : IWaifusRepository {
-
+        //docker run --name waifus-mysql -e MYSQL_ROOT_PASSWORD = secret - d - p 3307:3306 mysql
         public MysqlDbContext MysqlDbContext;
 
         public MySQLWaifusRepository() {
