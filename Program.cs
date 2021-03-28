@@ -11,8 +11,9 @@ namespace ConsoleApp1 {
             MainProcedure mainProcedure = new ();
 
             var repository = new MySQLWaifusRepository();
+            var repositoryMongo = new MongoDBWaifusRepository();
 
-            mainProcedure.mainTask(repository);
+            mainProcedure.mainTask(repositoryMongo);
         }
 
         class MainProcedure {
@@ -35,7 +36,8 @@ namespace ConsoleApp1 {
                                 anime = Console.ReadLine();
 
                                 waifusRepository.CreateWaifu( 
-                                    new() { 
+                                    new() {
+                                        Id = random.Next(1, 5000),
                                         Name = name,
                                         Source = anime,
                                     } 
